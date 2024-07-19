@@ -1,0 +1,15 @@
+package task
+
+import (
+	"minicore/models"
+	"strconv"
+)
+
+templ TasksView(tasks []models.Task) {
+	for _, task := range tasks {
+		<div>
+			<h3>{ task.Description }</h3>
+			<p>{ strconv.FormatInt(int64(task.EndDateTS), 10) }</p>
+		</div>
+	}
+}
