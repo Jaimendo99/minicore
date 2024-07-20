@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"minicore/controllers/UiCOntrollers"
 	"minicore/controllers/employee"
 	"minicore/controllers/project"
 	"minicore/controllers/task"
@@ -29,14 +30,13 @@ func main() {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	e.GET("/", func(c echo.Context) error {
-		return c.String(200, "Hello, World!")
-	},
-	)
+	e.GET("/", UiCOntrollers.GetHomePage())
 
 	e.GET("/employees", employee.GetEmployees())
 	e.GET("/projects", project.GetProjects())
 	e.GET("/tasks", task.GetTasks())
+
+	e.GET("/overdue", task.GetOverDueTasks())
 
 	e.Static("/static", "static")
 
