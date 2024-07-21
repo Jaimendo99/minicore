@@ -5,4 +5,4 @@ tmp
 # *_templ.txt
 test.html
 tailwind
-*.db
+# *.db
