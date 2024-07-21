@@ -54,6 +54,14 @@ go get github.com/labstack/echo/v4
 go get github.com/labstack/echo/v4/middleware
 ```
 
+### [GORM](https://gorm.io/docs/has_one.html) ORM for GoLang (sqlite default)
+Gorm is a go library, you can install it by runnnin the following command:
+``` bash
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/sqlite
+```
+
+
 
 ### Installing
 
@@ -61,13 +69,13 @@ The best way to self host this app is by using the dockerfile provided in the pr
 
 Clone the project
 ```bash
-git clone Jaimendo99/talibox
+git clone Jaimendo99/minicore
 ```
 Build the image
 ```bash
-docker build -t talibox .
+docker build -t minicore .
 ```
 Run the image
 ```bash
-docker run -p 8080:8080 talibox
+docker run -p 8080:8080 minicore
 ```
