@@ -16,7 +16,7 @@
 
 
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Deployment](#Installing)
 - [Usage](#usage)
 - [Built Using](#built_using)
 
